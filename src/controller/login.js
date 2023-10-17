@@ -2,7 +2,7 @@ const passport = require('passport');
 
 module.exports = {
     async login(req, res, next) {
-        passport.authenticate('local', {
+        passport.authenticate('local',  {
             successRedirect: "/login/Sucesso",
             failureRedirect: "/login/Fracasso",
         })(req, res, next);
